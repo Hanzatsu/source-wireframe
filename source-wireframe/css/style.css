@@ -1,0 +1,254 @@
+/* Box Model Hack */
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background-color: #f5f9fc;
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+ 
+  
+
+input#nav-toggle.nav-toggle{
+  display: none;
+}
+
+
+.nav-toggle-label{
+  position:absolute;
+  top:0;
+  left: 0;
+  margin-left: 1em;
+  height:3em;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+  display: block;
+  background: black;
+  width:2em;
+  height: 2px;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before{
+  bottom:7px;
+}
+.nav-toggle-label span::after{
+  top: 7px;
+}
+
+
+
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex; 
+  width: 100%;
+  background-color: #f5f9fc;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border: red solid 1px;
+}
+
+nav ul li a{
+  display: inline-block;
+  color: black;
+  font-family: 'raleway', sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.first-section{
+  display: flex;
+}
+
+.one-section{
+  margin-top: 5em;
+  width: 25%;
+  margin-left: 15em;
+}
+
+.two-section{
+  display: flex;
+  margin-top: 3em;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+
+.phone-laptop{
+  justify-content: flex-end;
+  border: gold solid 1px;
+  min-width:  50%;
+}
+
+div.div-two{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 3em;
+}
+
+.first-link-image{
+  margin-left: 2.5em;
+}
+.second-section{
+  display: flex;
+  justify-content: center;
+  margin-left: 13em;
+}
+
+.second-section ul li{
+  list-style: none;
+  margin-right: 5em;
+  padding: 0%;
+}
+
+
+
+footer {
+  display: flex;
+  margin-top: 5em;
+  margin-left: 15em;
+  margin-bottom: 3em;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+@media screen and (max-width:800px) {
+  
+div.div-two{
+  display: flex;
+}
+
+
+  section.first-section{
+    display: inline-block;
+    width: 100%;
+  }  
+
+  .hamburger{
+    display: block;
+  }
+
+  section.second-section{
+    display: inline-block;
+    width: 100%;
+
+  }
+
+
+
+  section.first-section{
+    display: inline-block;
+    width: 100%;
+
+  }
+
+  section.one-section{
+    display: inline-block;
+    width: 100%;
+  }
+
+  section.two-section{
+    width: 100%;
+  }
+
+ img.phone-laptop{
+   float: right;
+   min-width: 100%;
+  
+ }
+  
+div.div{
+  width: 100%;
+}
+
+  .div-container{
+    display: flex;
+  }
+  
+  nav{
+    display: flex;
+  }
+  
+  nav ul{
+    display: none;
+    flex-direction: column;
+  }
+
+  nav ul{
+
+  }
+
+  .nav-ul.show{
+    display: flex;
+  }
+  
+  .button{
+    display: none;
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+  }
+ 
+}
+
+.nav-toggle:checked ~  nav{
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~  nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
